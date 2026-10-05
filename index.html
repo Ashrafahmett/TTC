@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
- <title>TCC Puzzle Challenge</title>
+ <title>TCC puzzle Challenge </title>
  <style>
-  :root{--bg:#f4f1fa;--card:#fff;--ink:#241346;--mute:#6b5f87;--p:#823cc4;--pd:#5b2494;--line:#d9cdef;--tile:#241346;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  :root{--img:url(data:image/png;base64,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be/tarr/9fWzZ2dIFqn4BxcV0IG7YjFyT6xhO8xmtzWa/ld9jnqShT9PtV69Dz4xkSkBjFQum2YZVHPotxKLVXNL/CyoGnjX50ft6KuyB7LEJkgCS/2Jl4ANu9944yjkK0m6n66Mt/Fcte6IrZteaKeAIbCaqfPHnPcl1P6Lefqlyk3UyNXHR7ddcW7bM7u6OtXVgMY/cwHr1yQqixrt9zirTsr/0yWmXmx12Q7fv4nuFQzNLR+aPr3kW+O8LqYP1YpcO9RzdppvhOnFifVIBv5x+jiInVpYnLZLbddogLyuO+bneo9AuezA04gOCjipgWTJglWDa9w+TOMxHQDx31q1Xpf17/Ykl9Xj/gBkV//nNLE33ni+clrrjvXoOvQgpuW41R7dcp08W1LoQhe60IUudKELXehCF7rQhS50oQtd6EIXutCFLnShC13oQhe60IUudKELXehCF7rQhS50oQtd6EIXutCFLnShC13oQhe60IUudKELXehCF7rQhS50oQtd6EIXutCFLnShC13oQhe60IUudKELXehCF7rQhS50oQtd6EIXutCFLnShC13oQhe60IUudKELXehCF7rQhS50oQtd6EIXutCFLnShC13oQhe60IUudKELXehCF7rQhS50oQtd6EIXutCFLnShC13oQhe60IUudKELXehCF7rQhS50oQtd6EIXutCFLnShC13oQhe60IUudKELXehCF7rQhS50oQtd6EIXutCFLnShd/tWJLArjGy8A+/0KXervStLXttXPwbITU1vDHassFQPqqA0gPIrsqTPjtpBNbwya/c39BGYlec2wP5fJ4MVmOR7Hck9mv8CK6XQkuFZAtoAAAAASUVORK5CYII=);--bg:#f4f1fa;--card:#fff;--ink:#241346;--mute:#6b5f87;--p:#823cc4;--pd:#5b2494;--line:#d9cdef;--tile:#241346;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
   @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150c27;--card:#1f1238;--ink:#f1eafd;--mute:#a698c4;--line:#3a2866;--tile:#0e0719}}
   *{box-sizing:border-box}
   html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif}
   body{display:flex;justify-content:center;padding:20px 14px}
   .card{width:100%;max-width:440px;background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:22px;box-shadow:8px 8px 0 var(--line)}
   h1{font-size:34px;letter-spacing:-.02em;margin:14px 0 4px;text-align:center}
-  .logo{display:block;width:62%;margin:0 auto;border-radius:14px;border:5px solid var(--tile)}
+  .sub{text-align:center;color:var(--mute);margin:0 0 6px;font-size:16px}
+  .logo{display:block;width:62%;aspect-ratio:1;background:var(--img) center/cover;margin:0 auto;border-radius:14px;border:5px solid var(--tile)}
   label{display:block;font-size:13px;color:var(--mute);margin:18px 0 6px}
   input{width:100%;font:inherit;font-size:17px;padding:14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
   button.go{width:100%;margin-top:14px;font:inherit;font-weight:600;font-size:17px;padding:14px;border:0;border-radius:12px;background:var(--p);color:#fff;cursor:pointer}
@@ -25,8 +26,8 @@
   h2{margin:0;font-size:30px;letter-spacing:-.02em}
   .bar{height:6px;background:var(--line);border-radius:6px;margin:16px 0;overflow:hidden}
   .bar i{display:block;height:100%;width:100%;background:var(--p);transition:width .1s linear}
-  .board{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:var(--tile);padding:6px;border-radius:14px;aspect-ratio:5/2}
-  .t{border:0;padding:0;border-radius:6px;background-image:url(logo.jpg);background-size:500% 200%;cursor:pointer;touch-action:manipulation;transition:transform .12s}
+  .board{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:var(--tile);padding:6px;border-radius:14px;aspect-ratio:5/3.4}
+  .t{border:0;padding:0;border-radius:6px;background-image:var(--img);background-size:500% 300%;cursor:pointer;touch-action:manipulation;transition:transform .12s}
   .t.sel{outline:3px solid #fff;outline-offset:-3px;transform:scale(.93);box-shadow:0 0 0 3px var(--p)}
   .t.ok{opacity:.55}
   .hint{text-align:center;color:var(--mute);font-size:14px;margin:14px 0 0}
@@ -42,7 +43,7 @@
  </style></head><body>
 <main class="card">
  <section id="start">
-  <img class="logo" src="logo.jpg" alt="TCC logo">
+  <div class="logo" role="img" aria-label="TCC logo"></div>
   <h1>Puzzle Challenge</h1>
   <label for="name">Your name</label>
   <input id="name" placeholder="Enter your name" autocomplete="off" maxlength="30">
@@ -65,15 +66,18 @@
  </section>
 </main>
 <script>
- const C=5,R=2,N=C*R,LIMIT=90;
+ const C=5,R=3,N=C*R,LIMIT=90;
+ const G=[0, 0, 0, 0, 0, 0, 6, 7, 8, 0, 0, 0, 0, 0, 0]; // identical-looking tiles share a number
+ const same=(v,k)=>G[v]===G[k];
+ const LOGO=G.map((g,k)=>G.filter(x=>x===g).length===1); // only the TCC tiles
  const $=id=>document.getElementById(id);
  let order,sel,t0,raf,over;
  function show(id){["start","game","end"].forEach(s=>$(s).classList.toggle("hide",s!==id))}
- function shuffle(){let a;do{a=[...Array(N).keys()];for(let i=N-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}}while(a.some((v,i)=>v===i));return a}
+ function shuffle(){let a;do{a=[...Array(N).keys()];for(let i=N-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}}while(a.every((v,i)=>same(v,i))||a.some((v,i)=>v===i&&G.filter(g=>g===G[v]).length===1));return a}
  function render(){
   const b=$("board");b.innerHTML="";
   order.forEach((v,i)=>{
-   const t=document.createElement("button");t.className="t"+(sel===i?" sel":"")+(v===i?" ok":"");
+   const t=document.createElement("button");t.className="t"+(sel===i?" sel":"")+(LOGO[v]&&v===i?" ok":"");
    t.setAttribute("aria-label","Tile "+(i+1));
    t.style.backgroundPosition=(v%C*100/(C-1))+"% "+(Math.floor(v/C)*100/(R-1))+"%";
    t.onclick=()=>tap(i);b.appendChild(t)});
@@ -83,7 +87,7 @@
   if(sel===null)sel=i;
   else if(sel===i)sel=null;
   else{[order[sel],order[i]]=[order[i],order[sel]];sel=null;
-   if(order.every((v,k)=>v===k)){finish(true);return}}
+   if(order.every((v,k)=>same(v,k))){finish(true);return}}
   render();
  }
  function tick(){
@@ -95,7 +99,7 @@
  function finish(win){
   over=true;cancelAnimationFrame(raf);render();
   const used=((performance.now()-t0)/1000).toFixed(2),n=$("name").value.trim();
-  const placed=order.filter((v,k)=>v===k).length;
+  const placed=order.filter((v,k)=>same(v,k)).length;
   setTimeout(()=>{
    $("eyebrow").textContent=win?"Run complete":"Time's up";
    $("endTitle").textContent=win?"That is the mark.":"Almost had it.";
@@ -115,3 +119,4 @@
  $("name").addEventListener("keydown",e=>{if(e.key==="Enter")begin()});
  $("again").onclick=()=>show("start");
 </script></body></html>
+
