@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>TCC Puzzle Challenge</title>
-<style>
-:root{--bg:#f4f1fa;--card:#fff;--ink:#241346;--mute:#6b5f87;--p:#823cc4;--pd:#5b2494;--line:#d9cdef;--tile:#241346;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150c27;--card:#1f1238;--ink:#f1eafd;--mute:#a698c4;--line:#3a2866;--tile:#0e0719}}
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif}
-body{display:flex;justify-content:center;padding:20px 14px}
-.card{width:100%;max-width:440px;background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:22px;box-shadow:8px 8px 0 var(--line)}
-h1{font-size:34px;letter-spacing:-.02em;margin:14px 0 4px;text-align:center}
-.logo{display:block;width:62%;margin:0 auto;border-radius:14px;border:5px solid var(--tile)}
-label{display:block;font-size:13px;color:var(--mute);margin:18px 0 6px}
-input{width:100%;font:inherit;font-size:17px;padding:14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
-button.go{width:100%;margin-top:14px;font:inherit;font-weight:600;font-size:17px;padding:14px;border:0;border-radius:12px;background:var(--p);color:#fff;cursor:pointer}
-button.go:hover{background:var(--pd)}
-button:focus-visible,.t:focus-visible,input:focus-visible{outline:3px solid var(--p);outline-offset:2px}
-.hide{display:none}
-.top{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
-.who{font-size:13px;color:var(--mute)}
-.timer{border:1.5px solid var(--line);border-radius:14px;padding:8px 14px;min-width:110px}
-.timer small{display:block;font-size:12px;color:var(--mute)}
-.timer b{font-size:28px;font-variant-numeric:tabular-nums}
-h2{margin:0;font-size:30px;letter-spacing:-.02em}
-.bar{height:6px;background:var(--line);border-radius:6px;margin:16px 0;overflow:hidden}
-.bar i{display:block;height:100%;width:100%;background:var(--p);transition:width .1s linear}
-.board{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:var(--tile);padding:6px;border-radius:14px;aspect-ratio:5/3.4}
-.t{border:0;padding:0;border-radius:6px;background-image:url(logo.jpg);background-size:500% 300%;cursor:pointer;touch-action:manipulation;transition:transform .12s}
-.t.sel{outline:3px solid #fff;outline-offset:-3px;transform:scale(.93);box-shadow:0 0 0 3px var(--p)}
-.t.ok{opacity:.55}
-.hint{text-align:center;color:var(--mute);font-size:14px;margin:14px 0 0}
-.end{text-align:center;padding:10px 0}
-.medal{width:100px;height:100px;border-radius:50%;border:1.5px solid var(--p);color:var(--p);display:grid;place-items:center;margin:0 auto 26px}
-.eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--p);font-family:ui-monospace,Menlo,monospace;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
-.eyebrow i{width:26px;height:2px;background:var(--p)}
-.end h1{font-size:40px;line-height:1.05;margin:6px 0 14px}
-.end p{color:var(--mute);margin:0 auto;max-width:300px;font-size:17px;line-height:1.55}
-.big{font-family:ui-monospace,Menlo,monospace;font-weight:600;font-size:54px;color:var(--p);margin:30px 0 26px;letter-spacing:-.03em}
-.again{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:auto;padding:14px 26px;box-shadow:5px 5px 0 var(--line)}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body>
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <title>TCC Puzzle Challenge</title>
+ <style>
+  :root{--bg:#f4f1fa;--card:#fff;--ink:#241346;--mute:#6b5f87;--p:#823cc4;--pd:#5b2494;--line:#d9cdef;--tile:#241346;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150c27;--card:#1f1238;--ink:#f1eafd;--mute:#a698c4;--line:#3a2866;--tile:#0e0719}}
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Space Grotesk",system-ui,sans-serif}
+  body{display:flex;justify-content:center;padding:20px 14px}
+  .card{width:100%;max-width:440px;background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:22px;box-shadow:8px 8px 0 var(--line)}
+  h1{font-size:34px;letter-spacing:-.02em;margin:14px 0 4px;text-align:center}
+  .logo{display:block;width:62%;margin:0 auto;border-radius:14px;border:5px solid var(--tile)}
+  label{display:block;font-size:13px;color:var(--mute);margin:18px 0 6px}
+  input{width:100%;font:inherit;font-size:17px;padding:14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+  button.go{width:100%;margin-top:14px;font:inherit;font-weight:600;font-size:17px;padding:14px;border:0;border-radius:12px;background:var(--p);color:#fff;cursor:pointer}
+  button.go:hover{background:var(--pd)}
+  button:focus-visible,.t:focus-visible,input:focus-visible{outline:3px solid var(--p);outline-offset:2px}
+  .hide{display:none}
+  .top{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+  .who{font-size:13px;color:var(--mute)}
+  .timer{border:1.5px solid var(--line);border-radius:14px;padding:8px 14px;min-width:110px}
+  .timer small{display:block;font-size:12px;color:var(--mute)}
+  .timer b{font-size:28px;font-variant-numeric:tabular-nums}
+  h2{margin:0;font-size:30px;letter-spacing:-.02em}
+  .bar{height:6px;background:var(--line);border-radius:6px;margin:16px 0;overflow:hidden}
+  .bar i{display:block;height:100%;width:100%;background:var(--p);transition:width .1s linear}
+  .board{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:var(--tile);padding:6px;border-radius:14px;aspect-ratio:5/2}
+  .t{border:0;padding:0;border-radius:6px;background-image:url(logo.jpg);background-size:500% 200%;cursor:pointer;touch-action:manipulation;transition:transform .12s}
+  .t.sel{outline:3px solid #fff;outline-offset:-3px;transform:scale(.93);box-shadow:0 0 0 3px var(--p)}
+  .t.ok{opacity:.55}
+  .hint{text-align:center;color:var(--mute);font-size:14px;margin:14px 0 0}
+  .end{text-align:center;padding:10px 0}
+  .medal{width:100px;height:100px;border-radius:50%;border:1.5px solid var(--p);color:var(--p);display:grid;place-items:center;margin:0 auto 26px}
+  .eyebrow{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--p);font-family:ui-monospace,Menlo,monospace;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+  .eyebrow i{width:26px;height:2px;background:var(--p)}
+  .end h1{font-size:40px;line-height:1.05;margin:6px 0 14px}
+  .end p{color:var(--mute);margin:0 auto;max-width:300px;font-size:17px;line-height:1.55}
+  .big{font-family:ui-monospace,Menlo,monospace;font-weight:600;font-size:54px;color:var(--p);margin:30px 0 26px;letter-spacing:-.03em}
+  .again{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:auto;padding:14px 26px;box-shadow:5px 5px 0 var(--line)}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+ </style></head><body>
 <main class="card">
  <section id="start">
   <img class="logo" src="logo.jpg" alt="TCC logo">
@@ -65,52 +65,53 @@ h2{margin:0;font-size:30px;letter-spacing:-.02em}
  </section>
 </main>
 <script>
-const C=5,R=3,N=C*R,LIMIT=90;
-const $=id=>document.getElementById(id);
-let order,sel,t0,raf,over;
-function show(id){["start","game","end"].forEach(s=>$(s).classList.toggle("hide",s!==id))}
-function shuffle(){let a;do{a=[...Array(N).keys()];for(let i=N-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}}while(a.some((v,i)=>v===i));return a}
-function render(){
- const b=$("board");b.innerHTML="";
- order.forEach((v,i)=>{
-  const t=document.createElement("button");t.className="t"+(sel===i?" sel":"")+(v===i?" ok":"");
-  t.setAttribute("aria-label","Tile "+(i+1));
-  t.style.backgroundPosition=(v%C*100/(C-1))+"% "+(Math.floor(v/C)*100/(R-1))+"%";
-  t.onclick=()=>tap(i);b.appendChild(t)});
-}
-function tap(i){
- if(over)return;
- if(sel===null)sel=i;
- else if(sel===i)sel=null;
- else{[order[sel],order[i]]=[order[i],order[sel]];sel=null;
-  if(order.every((v,k)=>v===k)){finish(true);return}}
- render();
-}
-function tick(){
- const left=Math.max(0,LIMIT-(performance.now()-t0)/1000);
- $("time").textContent=left.toFixed(2);$("bar").style.width=(left/LIMIT*100)+"%";
- if(left<=0)finish(false);else raf=requestAnimationFrame(tick);
-}
-function finish(win){
- over=true;cancelAnimationFrame(raf);render();
- const used=((performance.now()-t0)/1000).toFixed(2),n=$("name").value.trim();
- const placed=order.filter((v,k)=>v===k).length;
- setTimeout(()=>{
-  $("eyebrow").textContent=win?"Run complete":"Time's up";
-  $("endTitle").textContent=win?"That is the mark.":"Almost had it.";
-  $("endMsg").textContent=win?"Nice work, "+n+". The TCC logo is back where it belongs.":n+", "+placed+" of "+N+" tiles were in place. Take another run.";
-  $("endTime").textContent=win?used+"s":placed+"/"+N;
-  $("icon").style.display=win?"":"none";
-  show("end")},win?500:0);
-}
-function begin(){
- const n=$("name").value.trim();
- if(!n){$("name").focus();$("name").placeholder="Enter your name to start";return}
- order=shuffle();sel=null;over=false;
- $("who").textContent="Player: "+n;show("game");render();
- t0=performance.now();raf=requestAnimationFrame(tick);
-}
-$("startBtn").onclick=begin;
-$("name").addEventListener("keydown",e=>{if(e.key==="Enter")begin()});
-$("again").onclick=()=>show("start");
+ const C=5,R=2,N=C*R,LIMIT=90;
+ const $=id=>document.getElementById(id);
+ let order,sel,t0,raf,over;
+ function show(id){["start","game","end"].forEach(s=>$(s).classList.toggle("hide",s!==id))}
+ function shuffle(){let a;do{a=[...Array(N).keys()];for(let i=N-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}}while(a.some((v,i)=>v===i));return a}
+ function render(){
+  const b=$("board");b.innerHTML="";
+  order.forEach((v,i)=>{
+   const t=document.createElement("button");t.className="t"+(sel===i?" sel":"")+(v===i?" ok":"");
+   t.setAttribute("aria-label","Tile "+(i+1));
+   t.style.backgroundPosition=(v%C*100/(C-1))+"% "+(Math.floor(v/C)*100/(R-1))+"%";
+   t.onclick=()=>tap(i);b.appendChild(t)});
+ }
+ function tap(i){
+  if(over)return;
+  if(sel===null)sel=i;
+  else if(sel===i)sel=null;
+  else{[order[sel],order[i]]=[order[i],order[sel]];sel=null;
+   if(order.every((v,k)=>v===k)){finish(true);return}}
+  render();
+ }
+ function tick(){
+  if(over)return;
+  const left=Math.max(0,LIMIT-(performance.now()-t0)/1000);
+  $("time").textContent=left.toFixed(2);$("bar").style.width=(left/LIMIT*100)+"%";
+  if(left<=0)finish(false);else raf=requestAnimationFrame(tick);
+ }
+ function finish(win){
+  over=true;cancelAnimationFrame(raf);render();
+  const used=((performance.now()-t0)/1000).toFixed(2),n=$("name").value.trim();
+  const placed=order.filter((v,k)=>v===k).length;
+  setTimeout(()=>{
+   $("eyebrow").textContent=win?"Run complete":"Time's up";
+   $("endTitle").textContent=win?"That is the mark.":"Almost had it.";
+   $("endMsg").textContent=win?"Nice work, "+n+". The TCC logo is back where it belongs.":n+", "+placed+" of "+N+" tiles were in place. Take another run.";
+   $("endTime").textContent=win?used+"s":placed+"/"+N;
+   $("icon").style.display=win?"":"none";
+   show("end")},win?250:0);
+ }
+ function begin(){
+  const n=$("name").value.trim();
+  if(!n){$("name").focus();$("name").placeholder="Enter your name to start";return}
+  order=shuffle();sel=null;over=false;
+  $("who").textContent="Player: "+n;show("game");render();
+  t0=performance.now();raf=requestAnimationFrame(tick);
+ }
+ $("startBtn").onclick=begin;
+ $("name").addEventListener("keydown",e=>{if(e.key==="Enter")begin()});
+ $("again").onclick=()=>show("start");
 </script></body></html>
